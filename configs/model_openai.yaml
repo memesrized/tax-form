@@ -1,0 +1,5 @@
+api_key: OPENAI_API_KEY # environment variable name for the API key, not the key itself!
+model_provider: openai
+model: gpt-5
+reasoning_effort: low
+temperature: 0.1

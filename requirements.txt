@@ -1,0 +1,11 @@
+pymupdf
+tqdm
+python-dotenv
+pillow
+langchain
+langgraph
+langchain-groq  # TODO: make installation with pyproject.toml with intallation options
+langchain-openai  # TODO: make installation with pyproject.toml with intallation options
+
+# just for convenience
+iprogress

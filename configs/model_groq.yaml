@@ -1,0 +1,4 @@
+api_key: GROQ_API_KEY # environment variable name for the API key, not the key itself!
+model_provider: groq
+model: openai/gpt-oss-120b
+temperature: 0.1
