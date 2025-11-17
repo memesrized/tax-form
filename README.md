@@ -31,7 +31,7 @@ This is inefficient (especially with shots), too complex, hallucination prone, w
 
 More optimized approach is to use sliding/expanding window (add pages to the input untill we reach the end of a form), but it's still O(N) context size and ~O(N^2) (not really, but you got the point) compute time. Some problems are mitigated, but still exist.
 
-My approach is to make log1 context size and logN time by using 2 step approach.
+My approach is to make O(1) context size and O(N) time by using 2 step approach.
 1. Detect if the page if the first page of a form (and what is the form)
 2. Until we hit the end of the form detect if this page belongs to the form where form represented by the very first page and the previous page to the current.
 
