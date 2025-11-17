@@ -25,11 +25,11 @@ Ground truth is a json file for each document with the following structure:
 
 TL;DR *classify pages one by one to find the start of a form -> check each of the following pages if they belong to the form -> if the end of the form is reached, start looking for another form start page.*
 
-The easiest way is to give an LLM the whole PDF in one or another way (e.g. depends on API features for internal PDF parsing provider provides or in availability of vision capabilities of the LLM).
+The easiest way is to give an LLM the whole PDF in one or another way (e.g. depends on API features for internal PDF parsing provider provides or on availability of vision capabilities of the LLM).
 
 This is inefficient (especially with shots), too complex, hallucination prone, we may hit context window limits depending on PDF size. 
 
-More optimized approach is to use sliding/expanding window (add pages to the input untill we reach the end of a form), but it's still logN context size and ~logN^2 (not really, but you got the point) compute time. Some problems are mitigated, but still exist.
+More optimized approach is to use sliding/expanding window (add pages to the input untill we reach the end of a form), but it's still O(N) context size and ~O(N^2) (not really, but you got the point) compute time. Some problems are mitigated, but still exist.
 
 My approach is to make log1 context size and logN time by using 2 step approach.
 1. Detect if the page if the first page of a form (and what is the form)
